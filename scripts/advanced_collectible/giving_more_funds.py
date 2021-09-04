@@ -12,17 +12,7 @@ def main():
     
     publish_source = False
     
-    advanced_collectible = AdvancedCollectible.deploy(
-        config["networks"][network.show_active()]["vrf_coordinator"],
-
-        config["networks"][network.show_active()]["link_token"],
-
-        config["networks"][network.show_active()]["keyhash"],
-
-        {"from": dev},
-
-        publish_source = publish_source
-    )
+    advanced_collectible = AdvancedCollectible[len(AdvancedCollectible) - 1]
 
     fund_advanced_collectible(advanced_collectible)
 
